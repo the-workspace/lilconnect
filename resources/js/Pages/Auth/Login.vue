@@ -36,8 +36,12 @@
                 <jet-button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     Log in
                 </jet-button>
+
             </div>
         </form>
+        <jet-nav-link :href="route('register')">
+            Register
+        </jet-nav-link>
     </jet-authentication-card>
 </template>
 
@@ -49,6 +53,7 @@
     import JetCheckbox from '@/Jetstream/Checkbox'
     import JetLabel from '@/Jetstream/Label'
     import JetValidationErrors from '@/Jetstream/ValidationErrors'
+    import JetNavLink from '@/Jetstream/NavLink'
 
     export default {
         components: {
@@ -58,7 +63,8 @@
             JetInput,
             JetCheckbox,
             JetLabel,
-            JetValidationErrors
+            JetValidationErrors,
+            JetNavLink
         },
 
         props: {

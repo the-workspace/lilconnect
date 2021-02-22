@@ -3,7 +3,7 @@
         <jet-banner />
 
         <div class="min-h-screen bg-gray-100">
-            <nav class="bg-white border-b border-gray-100">
+            <nav class="bg-gray-800 border-b border-gray-100">
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex justify-between h-16">
@@ -20,6 +20,14 @@
                                 <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </jet-nav-link>
+
+
+                                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+
+                                    <jet-nav-link :href="route('user.index')" >Users</jet-nav-link>
+                                    <jet-nav-link href="#" >Vendors</jet-nav-link>
+                                    <jet-nav-link href="#" >Calendar</jet-nav-link>
+
                             </div>
                         </div>
 
@@ -143,6 +151,9 @@
                         <jet-responsive-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                             Dashboard
                         </jet-responsive-nav-link>
+                        <jet-nav-link href="#" >Users</jet-nav-link>
+                        <jet-nav-link href="#" >Vendors</jet-nav-link>
+                        <jet-nav-link href="#" >Calendar</jet-nav-link>
                     </div>
 
                     <!-- Responsive Settings Options -->
@@ -214,8 +225,9 @@
                 </div>
             </nav>
 
+
             <!-- Page Heading -->
-            <header class="bg-white shadow" v-if="$slots.header">
+            <header v-if="$slots.header">
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                     <slot name="header"></slot>
                 </div>
